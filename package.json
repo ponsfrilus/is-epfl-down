@@ -1,0 +1,21 @@
+{
+  "name": "is-epfl-down",
+  "version": "0.0.1",
+  "description": "Check if EPFL is down",
+  "keywords": [
+    "EPFL",
+    "down",
+    "check",
+    "up",
+    "status"
+  ],
+  "author": "William Belle <william.belle@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/epfl-devrun/is-epfl-down.git",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {}
+}
