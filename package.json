@@ -15,6 +15,11 @@
   "engines": {
     "node": ">=4"
   },
+  "bin": "src/cli.js",
+  "files": [
+    "src/domain.json",
+    "src/cli.js"
+  ],
   "scripts": {
     "test": "jshint . && jscs . && mocha"
   },
