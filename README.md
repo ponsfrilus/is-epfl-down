@@ -37,6 +37,10 @@ License
 
 Apache License 2.0
 
+(c) All rights reserved. ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017.
+
+See the [LICENSE](LICENSE) file for more details.
+
 [npm-image]: https://img.shields.io/npm/v/is-epfl-down.svg
 [npm-url]: https://www.npmjs.com/package/is-epfl-down
 [travis-image]: https://travis-ci.org/epfl-devrun/is-epfl-down.svg?branch=master
