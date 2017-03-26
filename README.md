@@ -37,6 +37,11 @@ Command Line
 $ is-epfl-down
 ```
 
+Screenshot
+----------
+
+![Command line](https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/assets/screenshot.png)
+
 Contributing to Is EPFL Down
 ----------------------------
 
