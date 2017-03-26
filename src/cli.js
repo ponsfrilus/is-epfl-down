@@ -25,9 +25,9 @@ var downMsg = function(domain) {
 
 var finalMsg = function() {
   if (isDown) {
-    console.log('\n🍺  It\'s time for a break');
+    console.log('\n🍺  It\'s time for a break !');
   } else {
-    console.log('\n🦄  Everything is working fine');
+    console.log('\n🦄  Everything is working fine !');
   }
 };
 
