@@ -10,6 +10,9 @@
   <a href="https://travis-ci.org/epfl-devrun/is-epfl-down">
     <img alt="Travis Status" src="https://travis-ci.org/epfl-devrun/is-epfl-down.svg?branch=master">
   </a>
+  <a href='https://gemnasium.com/github.com/epfl-devrun/is-epfl-down'>
+    <img alt="Dependency Status" src="https://gemnasium.com/badges/github.com/epfl-devrun/is-epfl-down.svg" />
+  </a>
   <a href="https://github.com/epfl-devrun/is-epfl-down/issues">
     <img alt="Github Issues" src="https://img.shields.io/github/issues/epfl-devrun/is-epfl-down.svg">
   </a>
