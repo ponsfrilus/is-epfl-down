@@ -17,7 +17,7 @@
   },
   "bin": "src/cli.js",
   "files": [
-    "src/domain.json",
+    "src/services.json",
     "src/cli.js"
   ],
   "scripts": {

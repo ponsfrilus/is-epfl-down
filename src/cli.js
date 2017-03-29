@@ -9,7 +9,7 @@
 'use strict';
 
 var got        = require('got');
-var domains    = require('./domain.json');
+var services   = require('./services.json');
 var logSymbols = require('log-symbols');
 var isDown     = false;
 var promises   = [];
@@ -31,7 +31,8 @@ var finalMsg = function() {
   }
 };
 
-var testDomain = function(domain) {
+var testDomain = function(subdomain) {
+  var domain = subdomain + '.epfl.ch';
   promises.push(got.head(domain).then(function() {
     upMsg(domain);
   }).catch(function() {
@@ -39,8 +40,8 @@ var testDomain = function(domain) {
   }));
 };
 
-for (var i = 0; i < domains.length; i++) {
-  testDomain(domains[i]);
+for (var i = 0; i < services.length; i++) {
+  testDomain(services[i]);
 }
 
 Promise.all(promises).then(function() {
