@@ -9,10 +9,19 @@
 'use strict';
 
 var got        = require('got');
-var services   = require('./services.json');
 var logSymbols = require('log-symbols');
 var isDown     = false;
 var promises   = [];
+var subDomains = require('./subdomain.json');
+
+var yargs = require('yargs')
+  .usage('Usage: $0 [--main] [--services] [-?, --help]')
+  .option('main', {describe: 'Test the main site'})
+  .option('services', {describe: 'Test all the services'})
+  .help('?')
+  .alias('?', 'help');
+
+var argv = yargs.argv;
 
 var upMsg = function(domain) {
   console.log(logSymbols.success, domain);
@@ -40,12 +49,24 @@ var testDomain = function(subdomain) {
   }));
 };
 
-for (var i = 0; i < services.length; i++) {
-  testDomain(services[i]);
-}
+var iterateDomains = function() {
+  for (var i = 0; i < subDomains.length; i++) {
+    testDomain(subDomains[i]);
+  }
 
-Promise.all(promises).then(function() {
-  finalMsg();
-}).catch(function(e) {
-  console.log(e);
-});
+  Promise.all(promises).then(function() {
+    finalMsg();
+  }).catch(function(e) {
+    console.log(e);
+  });
+};
+
+if (argv.main) {
+  subDomains = subDomains.main;
+  iterateDomains();
+} else if (argv.services) {
+  subDomains = subDomains.services;
+  iterateDomains();
+} else {
+  yargs.showHelp();
+}

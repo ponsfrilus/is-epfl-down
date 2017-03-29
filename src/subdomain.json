@@ -1,0 +1,27 @@
+{
+  "main": [
+    "www"
+  ],
+  "services": [
+    "absences",
+    "accred",
+    "actu",
+    "actus",
+    "blog",
+    "blogs",
+    "epnet",
+    "gaspar",
+    "git",
+    "groups",
+    "it",
+    "mediatheque",
+    "mediatheque-old",
+    "memento",
+    "news",
+    "people",
+    "rdp",
+    "svn",
+    "tequila",
+    "wiki"
+  ]
+}

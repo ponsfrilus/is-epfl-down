@@ -14,7 +14,7 @@ describe('cli.js should return result', function() {
 
   before(function(done) {
     var execFile = require('child_process').execFile;
-    execFile('./src/cli.js', function(error, stdout) {
+    execFile('./src/cli.js', ['--main'], function(error, stdout) {
       if (error) {
         throw error;
       }
