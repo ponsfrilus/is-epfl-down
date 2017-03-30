@@ -38,6 +38,14 @@ Command Line
 
 ```bash
 $ is-epfl-down
+Usage: is-epfl-down [--main] [--faculties] [--services] [-?, --help]
+
+Options:
+  --main       Test the main site
+  --officials  Test all the officials
+  --faculties  Test all the faculties
+  --services   Test all the services
+  -?, --help   Show help
 ```
 
 Screenshot
