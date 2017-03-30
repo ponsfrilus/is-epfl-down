@@ -32,5 +32,10 @@
     "sb",
     "sti",
     "sv"
+  ],
+  "officials": [
+    "direction",
+    "information",
+    "international"
   ]
 }

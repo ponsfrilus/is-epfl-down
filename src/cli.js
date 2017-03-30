@@ -17,6 +17,7 @@ var subDomains = require('./subdomain.json');
 var yargs = require('yargs')
   .usage('Usage: $0 [--main] [--faculties] [--services] [-?, --help]')
   .option('main', {describe: 'Test the main site'})
+  .option('officials', {describe: 'Test all the officials'})
   .option('faculties', {describe: 'Test all the faculties'})
   .option('services', {describe: 'Test all the services'})
   .help('?')
@@ -70,6 +71,9 @@ if (argv.main) {
   iterateDomains();
 } else if (argv.faculties) {
   subDomains = subDomains.faculties;
+  iterateDomains();
+} else if (argv.officials) {
+  subDomains = subDomains.officials;
   iterateDomains();
 } else {
   yargs.showHelp();
