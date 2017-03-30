@@ -23,5 +23,14 @@
     "svn",
     "tequila",
     "wiki"
+  ],
+  "faculties": [
+    "cdh",
+    "cdm",
+    "enac",
+    "ic",
+    "sb",
+    "sti",
+    "sv"
   ]
 }
