@@ -1,6 +1,10 @@
 Is EPFL Down Changelog
 ======================
 
+### v0.0.4 / 2017-03-30
+
+  - Add cli argument ``--faculties`` and ``--officials``
+
 ### v0.0.3 / 2017-03-30
 
   - Add cli argument ``--main`` and ``--services``
