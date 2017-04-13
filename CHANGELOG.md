@@ -1,6 +1,11 @@
 Is EPFL Down Changelog
 ======================
 
+### v0.0.5 / 2017-04-13
+
+  - Add more domain to test
+  - Update contributing guide
+
 ### v0.0.4 / 2017-03-30
 
   - Add cli argument ``--faculties`` and ``--officials``
