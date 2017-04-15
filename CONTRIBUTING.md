@@ -30,7 +30,7 @@ $ ./src/cli.js
 Release
 -------
 
-  1. Bump the correct version (``npm version [<newversion> | major | minor | patch``)
+  1. Bump the correct version (``npm version [<newversion> | major | minor | patch]``)
   2. Update the file [CHANGELOG.md](CHANGELOG.md)
   3. Create the tag (``git tag -a v<version> -m "Tagging the v<version> release"``)
   4. Publish with ``npm publish``
