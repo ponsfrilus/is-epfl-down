@@ -18,7 +18,8 @@
   "bin": "src/cli.js",
   "files": [
     "src/subdomain.json",
-    "src/cli.js"
+    "src/cli.js",
+    "src/alarm.wav"
   ],
   "scripts": {
     "test": "jshint . && jscs . && mocha"
@@ -32,6 +33,7 @@
   "dependencies": {
     "got": "^6.7.1",
     "log-symbols": "^1.0.2",
-    "yargs": "^7.0.2"
+    "yargs": "^7.0.2",
+    "play-sound": "^1.1.1"
   }
 }
