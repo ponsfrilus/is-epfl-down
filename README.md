@@ -60,10 +60,11 @@ Contributions are always welcome.
 
 See [Contributing](CONTRIBUTING.md).
 
-Developer
----------
+Developers
+----------
 
-  * [William BELLE](https://github.com/williambelle)
+  * [Olivier Bieler](https://github.com/obieler)
+  * [William Belle](https://github.com/williambelle)
 
 License
 -------
