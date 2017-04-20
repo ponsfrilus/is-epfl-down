@@ -1,6 +1,10 @@
 Is EPFL Down Changelog
 ======================
 
+### v0.1.1 / 2017-04-20
+
+  - Add more domain to test
+
 ### v0.1.0 / 2017-04-18
 
   - Play alarm sound if a subdomain is down
