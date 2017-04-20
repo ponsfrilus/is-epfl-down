@@ -1,6 +1,6 @@
 {
   "name": "is-epfl-down",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Check if EPFL is down",
   "keywords": [
     "EPFL",
@@ -10,6 +10,9 @@
     "status"
   ],
   "author": "William Belle <william.belle@gmail.com>",
+  "contributors": [
+    "Olivier Bieler <olivier.bieler@gmail.com>"
+  ],
   "license": "Apache-2.0",
   "repository": "https://github.com/epfl-devrun/is-epfl-down.git",
   "engines": {
@@ -18,7 +21,8 @@
   "bin": "src/cli.js",
   "files": [
     "src/subdomain.json",
-    "src/cli.js"
+    "src/cli.js",
+    "src/alarm.wav"
   ],
   "scripts": {
     "test": "jshint . && jscs . && mocha"
@@ -32,6 +36,7 @@
   "dependencies": {
     "got": "^6.7.1",
     "log-symbols": "^1.0.2",
-    "yargs": "^7.0.2"
+    "yargs": "^7.0.2",
+    "play-sound": "^1.1.1"
   }
 }

@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 /*
- * (c) All rights reserved. ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE,
- * Switzerland, VPSI, 2017.
+ * (c) ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI, 2017.
  * See the LICENSE file for more details.
  */
 
@@ -13,6 +12,7 @@ var logSymbols = require('log-symbols');
 var isDown     = false;
 var promises   = [];
 var subDomains = require('./subdomain.json');
+var player     = require('play-sound')();
 
 var yargs = require('yargs')
   .usage('Usage: $0 [--main] [--faculties] [--services] [-?, --help]')
@@ -37,6 +37,7 @@ var downMsg = function(domain) {
 var finalMsg = function() {
   if (isDown) {
     console.log('\n🍺  It\'s time for a break !');
+    player.play(__dirname + '/alarm.wav');
   } else {
     console.log('\n🦄  Everything is working fine !');
   }
