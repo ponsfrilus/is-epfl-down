@@ -9,17 +9,23 @@
 
 var got        = require('got');
 var logSymbols = require('log-symbols');
+var jsonfile   = require('jsonfile');
 var isDown     = false;
 var promises   = [];
 var subDomains = require('./subdomain.json');
 var player     = require('play-sound')();
 
 var yargs = require('yargs')
-  .usage('Usage: $0 [--main] [--faculties] [--services] [-?, --help]')
-  .option('main', {describe: 'Test the main site'})
+  .usage('Usage: $0 [options]')
+  .option('main',      {describe: 'Test the main site'})
   .option('officials', {describe: 'Test all the officials'})
   .option('faculties', {describe: 'Test all the faculties'})
-  .option('services', {describe: 'Test all the services'})
+  .option('services',  {describe: 'Test all the services'})
+  .option('config', {
+    describe: 'Test your own list of subdomain',
+    requiresArg: true,
+    type: 'string',
+  })
   .help('?')
   .alias('?', 'help');
 
@@ -76,6 +82,13 @@ if (argv.main) {
 } else if (argv.officials) {
   subDomains = subDomains.officials;
   iterateDomains();
+} else if (argv.config) {
+  try {
+    subDomains = jsonfile.readFileSync(argv.config);
+    iterateDomains();
+  } catch (e) {
+    console.log(e);
+  }
 } else {
   yargs.showHelp();
 }

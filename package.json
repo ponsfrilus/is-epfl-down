@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "got": "^6.7.1",
+    "jsonfile": "^2.4.0",
     "log-symbols": "^1.0.2",
     "yargs": "^7.0.2",
     "play-sound": "^1.1.1"

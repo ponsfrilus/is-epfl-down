@@ -11,7 +11,7 @@
   "unused": false,
   "strict": true,
   "globals": {
-    "before": true,
+    "beforeEach": true,
     "describe": true,
     "it": true,
     "Promise": true

@@ -38,14 +38,44 @@ Command Line
 
 ```bash
 $ is-epfl-down
-Usage: is-epfl-down [--main] [--faculties] [--services] [-?, --help]
+Usage: is-epfl-down [options]
 
 Options:
   --main       Test the main site
   --officials  Test all the officials
   --faculties  Test all the faculties
   --services   Test all the services
+  --config     Test your own list of subdomain                          [string]
   -?, --help   Show help
+```
+
+**Testing the main site**
+
+```bash
+$ is-epfl-down --main
+```
+
+**Testing the services**
+
+```bash
+$ is-epfl-down --services
+```
+
+**Testing your own config**
+
+```bash
+$ is-epfl-down --config=/path/to/my/config.json
+```
+
+where ``config.json`` is an array of subdomain, for example:
+
+```json
+[
+  "actu",
+  "blogs",
+  "memento",
+  "wiki"
+]
 ```
 
 Screenshot
