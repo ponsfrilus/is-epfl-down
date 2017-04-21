@@ -1,6 +1,11 @@
 Is EPFL Down Changelog
 ======================
 
+### v0.2.0 / 2017-04-21
+
+  - Add cli argument ``--config``
+  - Improve logo
+
 ### v0.1.1 / 2017-04-20
 
   - Add more domain to test
