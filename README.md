@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Is EPFL Down" src="https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/assets/readme-logo.png">
+  <img alt="Is EPFL Down" src="https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/docs/readme/readme-logo.png">
 </p>
 
 <p align="center">
@@ -51,7 +51,7 @@ Options:
 Screenshot
 ----------
 
-![Command line](https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/assets/screenshot.png)
+![Command line](https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/docs/readme/screenshot.png)
 
 Contributing to Is EPFL Down
 ----------------------------
