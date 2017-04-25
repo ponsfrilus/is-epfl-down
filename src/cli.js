@@ -16,11 +16,34 @@ var subDomains = require('./subdomain.json');
 var player     = require('play-sound')();
 
 var yargs = require('yargs')
-  .option('main',      {describe: 'Test the main site'})
-  .option('officials', {describe: 'Test all the officials'})
-  .option('faculties', {describe: 'Test all the faculties'})
-  .option('services',  {describe: 'Test all the services'})
-  .option('config', {
+
+  // Main
+  .option('m', {
+    alias: 'main',
+    describe: 'Test the main site',
+  })
+
+  // Officials
+  .option('o', {
+    alias: 'officials',
+    describe: 'Test all the officials',
+  })
+
+  // Faculties
+  .option('f', {
+    alias: 'faculties',
+    describe: 'Test all the faculties',
+  })
+
+  // Services
+  .option('s', {
+    alias: 'services',
+    describe: 'Test all the services',
+  })
+
+  // Config
+  .option('c', {
+    alias: 'config',
     describe: 'Test your own list of subdomain',
     requiresArg: true,
     type: 'string',
@@ -82,19 +105,19 @@ var iterateDomains = function() {
   });
 };
 
-if (argv.main) {
+if (argv.m) {
   subDomains = subDomains.main;
   iterateDomains();
-} else if (argv.services) {
+} else if (argv.s) {
   subDomains = subDomains.services;
   iterateDomains();
-} else if (argv.faculties) {
+} else if (argv.f) {
   subDomains = subDomains.faculties;
   iterateDomains();
-} else if (argv.officials) {
+} else if (argv.o) {
   subDomains = subDomains.officials;
   iterateDomains();
-} else if (argv.config) {
+} else if (argv.c) {
   try {
     subDomains = jsonfile.readFileSync(argv.config);
     iterateDomains();
