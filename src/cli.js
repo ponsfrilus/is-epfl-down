@@ -51,7 +51,10 @@ var finalMsg = function() {
 
 var testDomain = function(subdomain) {
   var domain = subdomain + '.epfl.ch';
-  promises.push(got.head(domain).then(function() {
+  promises.push(got.head(domain, {
+    timeout: 7000,
+    retries: 0,
+  }).then(function() {
     upMsg(domain);
   }).catch(function() {
     downMsg(domain);
