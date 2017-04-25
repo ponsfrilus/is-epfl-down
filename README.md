@@ -41,24 +41,25 @@ $ is-epfl-down
 Usage: is-epfl-down [options]
 
 Options:
-  --main       Test the main site
-  --officials  Test all the officials
-  --faculties  Test all the faculties
-  --services   Test all the services
-  --config     Test your own list of subdomain                          [string]
-  -?, --help   Show help
+  -m, --main       Test the main site
+  -o, --officials  Test all the officials
+  -f, --faculties  Test all the faculties
+  -s, --services   Test all the services
+  -c, --config     Test your own list of subdomain       [string]
+  -v, --version    Show version number                  [boolean]
+  -?, --help       Show help                            [boolean]
 ```
 
 **Testing the main site**
 
 ```bash
-$ is-epfl-down --main
+$ is-epfl-down -m
 ```
 
 **Testing the services**
 
 ```bash
-$ is-epfl-down --services
+$ is-epfl-down -s
 ```
 
 **Testing your own config**
