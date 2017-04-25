@@ -16,7 +16,6 @@ var subDomains = require('./subdomain.json');
 var player     = require('play-sound')();
 
 var yargs = require('yargs')
-  .usage('Usage: $0 [options]')
   .option('main',      {describe: 'Test the main site'})
   .option('officials', {describe: 'Test all the officials'})
   .option('faculties', {describe: 'Test all the faculties'})
@@ -26,8 +25,18 @@ var yargs = require('yargs')
     requiresArg: true,
     type: 'string',
   })
+
+  // Version
+  .alias('v', 'version')
+  .version(function() {
+    return require('../package').version;
+  })
+  .describe('v', 'show version information')
+
+  // Help
   .help('?')
-  .alias('?', 'help');
+  .alias('?', 'help')
+  .usage('Usage: $0 [options]');
 
 var argv = yargs.argv;
 
