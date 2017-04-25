@@ -1,6 +1,12 @@
 Is EPFL Down Changelog
 ======================
 
+### v0.3.0 / 2017-04-25
+
+  - Add cli argument ``--version``
+  - Handle short cli arguments
+  - Set timeout to 7 seconds with 0 retry
+
 ### v0.2.0 / 2017-04-21
 
   - Add cli argument ``--config``
