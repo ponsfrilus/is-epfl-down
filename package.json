@@ -18,6 +18,7 @@
   "engines": {
     "node": ">=4"
   },
+  "main": "src/index.js",
   "bin": "src/cli.js",
   "files": [
     "src/subdomain.json",
