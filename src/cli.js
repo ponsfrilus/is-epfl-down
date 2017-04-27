@@ -7,15 +7,12 @@
 
 'use strict';
 
-var got        = require('got');
-var logSymbols = require('log-symbols');
-var jsonfile   = require('jsonfile');
-var isDown     = false;
-var promises   = [];
+var isEpflDown = require('./index.js');
 var subDomains = require('./subdomain.json');
-var player     = require('play-sound')();
 
-var yargs = require('yargs')
+var jsonfile = require('jsonfile');
+var player   = require('play-sound')();
+var yargs    = require('yargs')
 
   // Main
   .option('m', {
@@ -63,16 +60,38 @@ var yargs = require('yargs')
 
 var argv = yargs.argv;
 
-var upMsg = function(domain) {
-  console.log(logSymbols.success, domain);
+var buildSubDomainList = function() {
+  var subDomainList = [];
+  if (argv['?']) {
+    yargs.showHelp();
+  }
+  if (argv.m) {
+    subDomainList = subDomainList.concat(subDomains.main);
+  }
+  if (argv.s) {
+    subDomainList = subDomainList.concat(subDomains.services);
+  }
+  if (argv.f) {
+    subDomainList = subDomainList.concat(subDomains.faculties);
+  }
+  if (argv.o) {
+    subDomainList = subDomainList.concat(subDomains.officials);
+  }
+  if (argv.c) {
+    try {
+      subDomainList = subDomainList.concat(jsonfile.readFileSync(argv.c));
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  if (subDomainList.length === 0) {
+    yargs.showHelp();
+    process.exit(0);
+  }
+  return subDomainList;
 };
 
-var downMsg = function(domain) {
-  isDown = true;
-  console.log(logSymbols.error, domain);
-};
-
-var finalMsg = function() {
+var putResult = function(isDown) {
   if (isDown) {
     console.log('\n🍺  It\'s time for a break !');
     player.play(__dirname + '/alarm.wav');
@@ -81,49 +100,4 @@ var finalMsg = function() {
   }
 };
 
-var testDomain = function(subdomain) {
-  var domain = subdomain + '.epfl.ch';
-  promises.push(got.head(domain, {
-    timeout: 7000,
-    retries: 0,
-  }).then(function() {
-    upMsg(domain);
-  }).catch(function() {
-    downMsg(domain);
-  }));
-};
-
-var iterateDomains = function() {
-  for (var i = 0; i < subDomains.length; i++) {
-    testDomain(subDomains[i]);
-  }
-
-  Promise.all(promises).then(function() {
-    finalMsg();
-  }).catch(function(e) {
-    console.log(e);
-  });
-};
-
-if (argv.m) {
-  subDomains = subDomains.main;
-  iterateDomains();
-} else if (argv.s) {
-  subDomains = subDomains.services;
-  iterateDomains();
-} else if (argv.f) {
-  subDomains = subDomains.faculties;
-  iterateDomains();
-} else if (argv.o) {
-  subDomains = subDomains.officials;
-  iterateDomains();
-} else if (argv.c) {
-  try {
-    subDomains = jsonfile.readFileSync(argv.config);
-    iterateDomains();
-  } catch (e) {
-    console.log(e);
-  }
-} else {
-  yargs.showHelp();
-}
+isEpflDown(buildSubDomainList()).then(putResult);
