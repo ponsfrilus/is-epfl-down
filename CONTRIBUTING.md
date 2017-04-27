@@ -16,8 +16,16 @@ $ npm install
 Test
 ----
 
+Unit and integration tests:
+
 ```bash
 $ npm test
+```
+
+Code coverage:
+
+```bash
+$ npm run coverage
 ```
 
 Run

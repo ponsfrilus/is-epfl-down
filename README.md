@@ -10,11 +10,11 @@
   <a href="https://travis-ci.org/epfl-devrun/is-epfl-down">
     <img alt="Travis Status" src="https://travis-ci.org/epfl-devrun/is-epfl-down.svg?branch=master">
   </a>
+  <a href="https://coveralls.io/github/epfl-devrun/is-epfl-down?branch=master">
+    <img alt="Coverage Status" src="https://coveralls.io/repos/github/epfl-devrun/is-epfl-down/badge.svg?branch=master"/>
+  </a>
   <a href='https://gemnasium.com/github.com/epfl-devrun/is-epfl-down'>
     <img alt="Dependency Status" src="https://gemnasium.com/badges/github.com/epfl-devrun/is-epfl-down.svg" />
-  </a>
-  <a href="https://github.com/epfl-devrun/is-epfl-down/issues">
-    <img alt="Github Issues" src="https://img.shields.io/github/issues/epfl-devrun/is-epfl-down.svg">
   </a>
   <a href="https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/LICENSE">
     <img alt="MIT License" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg">
