@@ -49,8 +49,15 @@
     "sv"
   ],
   "officials": [
+    "career",
+    "carriere",
     "direction",
+    "emploi",
     "information",
-    "international"
+    "international",
+    "medias",
+    "mediacom",
+    "rh",
+    "vpi"
   ]
 }
