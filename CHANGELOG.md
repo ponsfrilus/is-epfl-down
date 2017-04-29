@@ -1,6 +1,14 @@
 Is EPFL Down Changelog
 ======================
 
+### v0.4.0 / 2017-04-29
+
+  - Rewrite package with cli + module
+  - Add coverage badge
+  - Add more domain to test
+  - Handle short grouped argument
+  - Update dependencies
+
 ### v0.3.0 / 2017-04-25
 
   - Add cli argument ``--version``
