@@ -17,25 +17,25 @@ var yargs    = require('yargs')
   // Main
   .option('m', {
     alias: 'main',
-    describe: 'Test the main site',
+    describe: 'Test EPFL main site',
   })
 
   // Officials
   .option('o', {
     alias: 'officials',
-    describe: 'Test all the officials',
+    describe: 'Test EPFL officials websites',
   })
 
   // Faculties
   .option('f', {
     alias: 'faculties',
-    describe: 'Test all the faculties',
+    describe: 'Test EPFL faculties websites',
   })
 
   // Services
   .option('s', {
     alias: 'services',
-    describe: 'Test all the services',
+    describe: 'Test EPFL services',
   })
 
   // Config
@@ -59,7 +59,7 @@ var yargs    = require('yargs')
   .version(function() {
     return require('../package').version;
   })
-  .describe('v', 'show version information')
+  .describe('v', 'Show version information')
 
   // Help
   .help('?')
