@@ -41,13 +41,14 @@ $ is-epfl-down
 Usage: is-epfl-down [options]
 
 Options:
-  -m, --main       Test the main site
-  -o, --officials  Test all the officials
-  -f, --faculties  Test all the faculties
-  -s, --services   Test all the services
-  -c, --config     Test your own list of subdomain       [string]
-  -v, --version    Show version number                  [boolean]
-  -?, --help       Show help                            [boolean]
+  -m, --main       Test EPFL main site
+  -o, --officials  Test EPFL officials websites
+  -f, --faculties  Test EPFL faculties websites
+  -s, --services   Test EPFL services
+  -c, --config     Test your own list of subdomain         [string]
+  -t, --timeout    Milliseconds to wait for a server       [number]
+  -v, --version    Show version number                    [boolean]
+  -?, --help       Show help                              [boolean]
 ```
 
 **Testing the main site**
