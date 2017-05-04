@@ -1,6 +1,11 @@
 Is EPFL Down Changelog
 ======================
 
+### v0.5.0 / 2017-05-04
+
+  - Add cli argument ``--timeout``
+  - Update yargs dependency
+
 ### v0.4.0 / 2017-04-29
 
   - Rewrite package with cli + module
