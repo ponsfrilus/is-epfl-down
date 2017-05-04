@@ -17,6 +17,12 @@ describe('is-epfl-down', function() {
     });
   });
 
+  it('should return false for actu.epfl.ch', function() {
+    return isEpflDown(['actu'], {timeout: 4000}).then(function(isDown) {
+      isDown.should.equal(false);
+    });
+  });
+
   it('should return true for unicorn.epfl.ch', function() {
     return isEpflDown(['unicorn']).then(function(isDown) {
       isDown.should.equal(true);

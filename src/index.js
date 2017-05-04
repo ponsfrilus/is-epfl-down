@@ -19,10 +19,10 @@ var putDomainIsDown = function(domain) {
   console.log(logSymbols.error, domain);
 };
 
-var testSubDomain = function(subdomain) {
+var testSubDomain = function(subdomain, opts) {
   var domain = subdomain + '.epfl.ch';
   promises.push(got.head(domain, {
-    timeout: 7000,
+    timeout: opts.timeout,
     retries: 0,
   }).then(function() {
     putDomainIsUp(domain);
@@ -31,13 +31,15 @@ var testSubDomain = function(subdomain) {
   }));
 };
 
-module.exports = function(domainsList) {
+module.exports = function(domainsList, opts) {
   if (!Array.isArray(domainsList)) {
     return Promise.reject(new TypeError('Expected an array'));
   }
+  opts = opts || {};
+  opts.timeout = opts.timeout || 7000;
 
   for (var i = 0; i < domainsList.length; i++) {
-    testSubDomain(domainsList[i]);
+    testSubDomain(domainsList[i], opts);
   }
   return Promise.all(promises).then(function() {
     return isDown;

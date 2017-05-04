@@ -46,6 +46,14 @@ var yargs    = require('yargs')
     type: 'string',
   })
 
+  // Timeout
+  .option('t', {
+    alias: 'timeout',
+    describe: 'Milliseconds to wait for a server',
+    requiresArg: true,
+    type: 'number',
+  })
+
   // Version
   .alias('v', 'version')
   .version(function() {
@@ -100,4 +108,9 @@ var putResult = function(isDown) {
   }
 };
 
-isEpflDown(buildSubDomainList()).then(putResult);
+var opts = {};
+if (argv.t) {
+  opts.timeout = argv.t;
+}
+
+isEpflDown(buildSubDomainList(), opts).then(putResult);
