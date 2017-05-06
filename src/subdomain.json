@@ -5,11 +5,16 @@
   "services": [
     "absences",
     "accred",
+    "acronymes",
     "actu",
     "actus",
     "blog",
     "blogs",
+    "bootstrap",
+    "bottin",
     "dam2",
+    "directory",
+    "doodle",
     "epnet",
     "gaspar",
     "git",
@@ -23,8 +28,10 @@
     "mediatheque",
     "mediatheque-old",
     "memento",
+    "moodle",
     "network",
     "news",
+    "parking",
     "payonline",
     "people",
     "personnes",
@@ -58,6 +65,7 @@
     "medias",
     "mediacom",
     "rh",
+    "securite",
     "vpi"
   ]
 }
