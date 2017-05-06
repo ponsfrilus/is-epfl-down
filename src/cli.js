@@ -54,6 +54,14 @@ var yargs    = require('yargs')
     type: 'number',
   })
 
+  // Alarm
+  .option('a', {
+    alias: 'alarm',
+    describe: 'Override default alarm sound',
+    requiresArg: true,
+    type: 'string',
+  })
+
   // Version
   .alias('v', 'version')
   .version(function() {
@@ -99,10 +107,18 @@ var buildSubDomainList = function() {
   return subDomainList;
 };
 
+var playAlarm = function() {
+  if (argv.a) {
+    player.play(argv.a);
+  } else {
+    player.play(__dirname + '/alarm.wav');
+  }
+};
+
 var putResult = function(isDown) {
   if (isDown) {
     console.log('\n🍺  It\'s time for a break !');
-    player.play(__dirname + '/alarm.wav');
+    playAlarm();
   } else {
     console.log('\n🦄  Everything is working fine !');
   }

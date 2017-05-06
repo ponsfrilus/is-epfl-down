@@ -45,10 +45,11 @@ Options:
   -o, --officials  Test EPFL officials websites
   -f, --faculties  Test EPFL faculties websites
   -s, --services   Test EPFL services
-  -c, --config     Test your own list of subdomain         [string]
-  -t, --timeout    Milliseconds to wait for a server       [number]
-  -v, --version    Show version number                    [boolean]
-  -?, --help       Show help                              [boolean]
+  -c, --config     Test your own list of subdomain      [string]
+  -t, --timeout    Milliseconds to wait for a server    [number]
+  -a, --alarm      Override default alarm sound         [string]
+  -v, --version    Show version number                 [boolean]
+  -?, --help       Show help                           [boolean]
 ```
 
 **Testing the main site**
