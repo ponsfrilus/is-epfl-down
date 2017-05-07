@@ -5,11 +5,22 @@
 
 'use strict';
 
-var isEpflDown = require('../src/index.js');
 var should     = require('chai').should();
+var rewire     = require('rewire');
 
-describe('is-epfl-down', function() {
+var isEpflDown = rewire('../src/index.js');
+
+describe('is-epfl-down module', function() {
   this.timeout(15000);
+
+  before(function(done) {
+    isEpflDown.__set__({
+      console: {
+        log: function() { /* Be quiet */ },
+      },
+    });
+    done();
+  });
 
   it('should return false for www.epfl.ch', function() {
     return isEpflDown(['www']).then(function(isDown) {
@@ -29,7 +40,7 @@ describe('is-epfl-down', function() {
     });
   });
 
-  it('should throw an exception', function() {
+  it('should throw an exception with an object in parameter', function() {
     return isEpflDown({}).then(function() {
     }).catch(function(err) {
       err.message.should.equal('Expected an array');
