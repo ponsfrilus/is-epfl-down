@@ -5,9 +5,10 @@
 
 'use strict';
 
-var should = require('chai').should();
+var should  = require('chai').should();
+var version = require('../package').version;
 
-describe('cli.js should return result', function() {
+describe('is-epfl-down cli', function() {
   this.timeout(15000);
   var cliOption = '-m';
   var response;
@@ -23,27 +24,33 @@ describe('cli.js should return result', function() {
     });
   });
 
-  it('result should match "working fine" with option -m', function() {
+  it('should match "working fine" with option -m', function() {
     response.should.match(/working fine/);
     cliOption = '--config=./test/testConfigGood.json';
-
   });
 
-  it('result should match "working fine" with config', function() {
+  it('should match "working fine" with a good config', function() {
     response.should.match(/working fine/);
     cliOption = '--unicorn';
   });
 
-  it('result should not match "time for a break|working fine"' +
+  it('should not match "time for a break|working fine" ' +
     'with option --unicorn', function() {
     response.should.not.match(/time for a break|working fine/);
     cliOption = '--config=./test/testConfigBad.json';
   });
 
-  it('result should not match "time for a break"' +
-    'with option --unicorn', function() {
-    response.should.not.match(/time for a break/);
+  it('should not match "time for a break" with a bad config', function() {
+    response.should.match(/time for a break/);
+    cliOption = '-m -t 10';
   });
 
+  it('should match "time for a break" with option -t 10', function() {
+    response.should.not.match(/time for a break/);
+    cliOption = '-v';
+  });
 
+  it('should match version with option -v', function() {
+    response.should.equal(version + '\n');
+  });
 });
