@@ -1,6 +1,13 @@
 Is EPFL Down Changelog
 ======================
 
+### v1.0.0 / 2017-05-12
+
+  - Add cli argument ``--alarm``
+  - Add more domain to test
+  - Add documentation link
+  - Improve tests
+
 ### v0.5.0 / 2017-05-04
 
   - Add cli argument ``--timeout``
