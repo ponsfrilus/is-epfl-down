@@ -26,15 +26,19 @@
 
 ---
 
-Install
--------
+Command Line
+------------
+
+### Install
+
+Install this globally and you'll have access to the `is-epfl-down` command
+anywhere on your system.
 
 ```bash
 $ npm install -g is-epfl-down
 ```
 
-Command Line
-------------
+### Usage
 
 ```bash
 $ is-epfl-down
@@ -52,34 +56,34 @@ Options:
   -?, --help       Show help                           [boolean]
 ```
 
-**Testing the main site**
+To read more about `is-epfl-down` cli, please visit the documentation: https://epfl-devrun.github.io/projects/is-epfl-down/cli.html.
+
+API
+---
+
+### Install
 
 ```bash
-$ is-epfl-down -m
+$ npm install --save is-epfl-down
 ```
 
-**Testing the services**
+### Usage
 
-```bash
-$ is-epfl-down -s
+```javascript
+var isEpflDown = require('is-epfl-down');
+
+isEpflDown(['www','actu','blogs']).then(function(isDown) {
+  console.log(isDown)
+  //=> false
+});
+
+isEpflDown(['unicorn'], {timeout: 1000}).then(function(isDown) {
+  console.log(isDown)
+  //=> true
+});
 ```
 
-**Testing your own config**
-
-```bash
-$ is-epfl-down --config=/path/to/my/config.json
-```
-
-where ``config.json`` is an array of subdomain, for example:
-
-```json
-[
-  "actu",
-  "blogs",
-  "memento",
-  "wiki"
-]
-```
+To read more about `is-epfl-down` module, please visit the documentation: https://epfl-devrun.github.io/projects/is-epfl-down/api.html.
 
 Screenshot
 ----------
