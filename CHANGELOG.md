@@ -1,6 +1,10 @@
 Is EPFL Down Changelog
 ======================
 
+### v1.0.1 / 2017-05-30
+
+  - Update dependencies
+
 ### v1.0.0 / 2017-05-12
 
   - Add cli argument ``--alarm``
