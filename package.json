@@ -31,15 +31,15 @@
     "coveralls": "npm run coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.0.0",
     "istanbul": "^0.4.5",
     "jscs": "^3.0.7",
     "jshint": "^2.9.4",
-    "mocha": "^3.3.0",
+    "mocha": "^3.4.2",
     "rewire": "^2.5.2"
   },
   "dependencies": {
-    "got": "^6.7.1",
+    "got": "^7.0.0",
     "jsonfile": "^3.0.0",
     "log-symbols": "^1.0.2",
     "yargs": "^8.0.1",
