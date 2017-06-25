@@ -8,6 +8,7 @@
     "acronymes",
     "actu",
     "actus",
+    "archiveweb",
     "blog",
     "blogs",
     "bootstrap",
@@ -25,10 +26,13 @@
     "infosciences",
     "it",
     "m",
+    "map",
     "mediatheque",
     "mediatheque-old",
     "memento",
+    "moocs",
     "moodle",
+    "myprint",
     "network",
     "news",
     "parking",
@@ -66,6 +70,7 @@
     "mediacom",
     "rh",
     "securite",
+    "tto",
     "vpi"
   ]
 }
