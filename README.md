@@ -40,7 +40,7 @@ $ npm install -g is-epfl-down
 
 ### Usage
 
-```bash
+```
 $ is-epfl-down
 Usage: is-epfl-down [options]
 
