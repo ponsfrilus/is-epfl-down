@@ -39,9 +39,11 @@
     "payonline",
     "people",
     "personnes",
+    "plan",
     "rdp",
     "repro",
     "reservations",
+    "shop",
     "static",
     "svn",
     "tequila",
@@ -69,8 +71,11 @@
     "medias",
     "mediacom",
     "rh",
+    "ri",
+    "sac",
     "securite",
     "tto",
-    "vpi"
+    "vpi",
+    "working"
   ]
 }
