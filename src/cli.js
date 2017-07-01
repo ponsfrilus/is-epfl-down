@@ -70,9 +70,14 @@ var yargs    = require('yargs')
   .describe('v', 'Show version information')
 
   // Help
-  .help('?')
-  .alias('?', 'help')
-  .usage('Usage: $0 [options]');
+  .help('h')
+  .alias('h', 'help')
+  .usage('Usage: $0 [options]')
+  .example('$0 -s', 'Test EPFL services')
+  .example('$0 -o', 'Test EPFL officials websites')
+  .example('$0 -f -t 2000', 'Test EPFL faculties with a timeout of 2 seconds')
+  .epilog('Copyright 2017 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, ' +
+    'Switzerland, VPSI.');
 
 var argv = yargs.argv;
 
