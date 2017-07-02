@@ -53,7 +53,14 @@ Options:
   -t, --timeout    Milliseconds to wait for a server    [number]
   -a, --alarm      Override default alarm sound         [string]
   -v, --version    Show version number                 [boolean]
-  -?, --help       Show help                           [boolean]
+  -h, --help       Show help                           [boolean]
+
+Examples:
+  is-epfl-down -s          Test EPFL services
+  is-epfl-down -o          Test EPFL officials websites
+  is-epfl-down -f -t 2000  Test EPFL faculties with a timeout of 2 seconds
+
+Copyright 2017 ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE, Switzerland, VPSI.
 ```
 
 To read more about `is-epfl-down` cli, please visit the documentation: https://epfl-devrun.github.io/projects/is-epfl-down/cli.html.
@@ -90,8 +97,8 @@ Screenshot
 
 ![Command line](https://raw.githubusercontent.com/epfl-devrun/is-epfl-down/master/docs/readme/screenshot.png)
 
-Contributing to Is EPFL Down
-----------------------------
+Contributing
+------------
 
 Contributions are always welcome.
 
