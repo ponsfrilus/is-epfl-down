@@ -1,7 +1,7 @@
 Contributing
 ============
 
-Welcome, so you are thinking about contributing to Is EPFL Down ?
+Welcome, so you are thinking about contributing ?
 Awesome, this a great place to start.
 
 Setup

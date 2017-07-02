@@ -1,5 +1,5 @@
-Is EPFL Down Changelog
-======================
+Changelog
+=========
 
 ### v1.0.2 / 2017-06-25
 
