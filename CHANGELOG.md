@@ -1,6 +1,12 @@
 Changelog
 =========
 
+### v1.0.3 / 2017-07-02
+
+  - Add more domain to test
+  - Improve cli informations with examples
+  - Update logo (darker red)
+
 ### v1.0.2 / 2017-06-25
 
   - Add more domain to test
