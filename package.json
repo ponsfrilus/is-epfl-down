@@ -31,7 +31,7 @@
     "coveralls": "npm run coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
-    "chai": "^4.0.2",
+    "chai": "^4.1.0",
     "istanbul": "^0.4.5",
     "jscs": "^3.0.7",
     "jshint": "^2.9.4",
@@ -39,10 +39,10 @@
     "rewire": "^2.5.2"
   },
   "dependencies": {
-    "got": "^7.0.0",
-    "jsonfile": "^3.0.0",
-    "log-symbols": "^1.0.2",
-    "yargs": "^8.0.2",
-    "play-sound": "^1.1.1"
+    "got": "^7.1.0",
+    "jsonfile": "^3.0.1",
+    "log-symbols": "^2.0.0",
+    "play-sound": "^1.1.1",
+    "yargs": "^8.0.2"
   }
 }
