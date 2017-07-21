@@ -1,6 +1,11 @@
 Changelog
 =========
 
+### v1.0.4 / 2017-07-21
+
+  - Add more domain to test
+  - Update dependencies
+
 ### v1.0.3 / 2017-07-02
 
   - Add more domain to test

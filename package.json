@@ -1,6 +1,6 @@
 {
   "name": "is-epfl-down",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Check if EPFL is down",
   "keywords": [
     "EPFL",
