@@ -1,6 +1,6 @@
 {
   "name": "is-epfl-down",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Check if EPFL is down",
   "keywords": [
     "EPFL",
@@ -11,7 +11,8 @@
   ],
   "author": "William Belle <william.belle@gmail.com>",
   "contributors": [
-    "Olivier Bieler <olivier.bieler@gmail.com>"
+    "Olivier Bieler <olivier.bieler@gmail.com>",
+    "Nicolas Borboën <nicolas.borboen@epfl.ch>"
   ],
   "license": "Apache-2.0",
   "repository": "https://github.com/epfl-devrun/is-epfl-down.git",
@@ -31,11 +32,11 @@
     "coveralls": "npm run coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
-    "chai": "^4.1.0",
+    "chai": "^4.1.1",
     "istanbul": "^0.4.5",
     "jscs": "^3.0.7",
-    "jshint": "^2.9.4",
-    "mocha": "^3.4.2",
+    "jshint": "^2.9.5",
+    "mocha": "^3.5.0",
     "rewire": "^2.5.2"
   },
   "dependencies": {
